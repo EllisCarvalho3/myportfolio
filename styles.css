@@ -320,7 +320,9 @@ section.visible > * {
 }
 
 #home .text {
-    max-width: 500px;
+     max-width: 600px;
+  text-align: left;
+  word-break: break-word;
 }
 
 #home h1 {
@@ -337,14 +339,12 @@ section.visible > * {
 
 /* Estiliza o SPAN que receberá o efeito de digitação */
 #dynamic-text {
-    /* Não precisa mais de visibility: hidden, overflow e white-space */
-    display: inline-block; 
-    
-    /* Mantemos apenas o cursor (border-right) e a animação blink */
-    border-right: 2px solid #c77dff; 
-        white-space: nowrap; /* Mantenha para evitar que o cargo quebre */
-
-    animation: blink 0.75s step-end infinite; /* O cursor piscando */
+    display: inline-block;
+  animation: blink 0.75s step-end infinite;
+  white-space: normal; /* ← permite quebrar linha conforme necessário */
+  word-wrap: break-word; /* quebra palavras longas */
+  text-align: left;
+  line-height: 1.2;
 }
 
 /* Animações de Digitação e Cursor */
@@ -358,16 +358,15 @@ section.visible > * {
 
 /* NOVO: Estiliza o Parágrafo (P) para ter o cursor */
 #dynamic-description {
-    display: inline-block; /* Necessário para que o cursor funcione */
-    border-right: 2px solid #c77dff; 
-        white-space: normal; 
-
-
-    animation: blink 0.75s step-end infinite; 
-    
-    /* Demais estilos do parágrafo */
-    font-size: 1.2rem;
-    color: #e6e6fa;
+    display: inline-block;
+  border-right: 1px solid #c77dff;
+  animation: blink 0.75s step-end infinite;
+  white-space: normal; /* ← texto pode quebrar linha */
+  word-wrap: break-word;
+  font-size: 1.2rem;
+  color: #e6e6fa;
+  text-align: left;
+  line-height: 1.6;
 }
 
 /* ... o @keyframes blink ... */
@@ -1414,54 +1413,48 @@ body.light-mode {
   }
 }
 
-/* ------------------------------------------- */
-/* RESPONSIVIDADE GERAL (Ajustes de Fontes)    */
-/* ------------------------------------------- */
-
-/* Ajuste para tablets e telas menores (até 768px de largura) */
 @media (max-width: 768px) {
-    /* Reduz o tamanho da fonte principal do título */
-    #home h1 {
-        font-size: 3rem; 
-        margin-left: 60px;
-    }
+  #home {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    /* Reduz o tamanho da fonte do parágrafo */
-    #dynamic-description {
-        font-size: 1.1rem;
-    }
-    
-    /* Se você tiver a imagem, pode ajustá-la aqui. Exemplo: */
-    #home img {
-        max-width: 300px;
-        height: auto;
-    }
+  #home .text {
+    max-width: 90%;
+    padding: 0 20px;
+  }
+
+  #home h1 {
+    font-size: 2.5rem;
+    line-height: 1.3;
+    text-align: center;
+  }
+
+  #dynamic-text, #dynamic-description {
+    text-align: center;
+    display: inline-block;
+  }
+
+  #dynamic-description {
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+
+  #home img {
+    max-width: 250px;
+    height: auto;
+    margin-top: 20px;
+  }
 }
 
-/* Ajuste para smartphones maiores (até 480px de largura) */
-@media (max-width: 480px) {
-    /* Reduz ainda mais o tamanho da fonte principal */
-    #home h1 {
-        font-size: 2.5rem; 
-
-    }
-
-    /* Mais um ajuste na fonte do parágrafo */
-    #dynamic-description {
-        font-size: 1rem;
-
-    }
-    
-    /* Ajusta o espaçamento do contêiner de texto se necessário */
-    #home .text {
-        padding: 0 15px; /* Adiciona um pequeno padding nas laterais */
-    }
-}
-
-/* Ajuste para smartphones menores (até 420px de largura) */
 @media (max-width: 420px) {
-    /* Reduz o tamanho da fonte para evitar quebra de linha excessiva */
-    #home h1 {
-        font-size: 2rem; 
-    }
+  #home h1 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  #dynamic-description {
+    font-size: 0.95rem;
+  }
 }
