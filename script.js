@@ -311,3 +311,107 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // responsividade
+
+
+
+
+
+
+/* ============================================================
+   CARREGAR MODAIS EXTERNOS (modais-projetos.html)
+============================================================ */
+
+document.querySelector('[data-tab="projetos"]').addEventListener("click", loadProjectModals);
+
+let modalsLoaded = false;
+
+function loadProjectModals() {
+    if (modalsLoaded) return;
+
+    fetch("modais-projetos.html")
+        .then(r => r.text())
+        .then(html => {
+            document.getElementById("modals-container").innerHTML = html;
+            modalsLoaded = true;
+
+            initProjectCarouselModal();
+            initCertificateModal(); 
+        });
+}
+
+/* ============================================================
+   MODAL CARROSSEL DE PROJETOS
+============================================================ */
+
+function initProjectCarouselModal() {
+    const cards = document.querySelectorAll(".project-card");
+    const modal = document.getElementById("carousel-modal");
+    const img = document.getElementById("carousel-image");
+    const desc = document.getElementById("carousel-description");
+    const dots = document.getElementById("carousel-dots");
+
+    const close = modal.querySelector(".carousel-close");
+    const prev = modal.querySelector(".carousel-prev");
+    const next = modal.querySelector(".carousel-next");
+
+    let imgs = [];
+    let index = 0;
+
+    cards.forEach(card => {
+        const cover = card.querySelector(".project-cover img");
+
+        cover.addEventListener("click", () => {
+            imgs = card.dataset.images.split(",").map(v => v.trim());
+            index = 0;
+
+            desc.textContent = card.dataset.description;
+            modal.classList.add("active");
+            update();
+        });
+    });
+
+    function update() {
+        img.src = imgs[index];
+
+        dots.innerHTML = "";
+        imgs.forEach((_, i) => {
+            const dot = document.createElement("span");
+            dot.className = "carousel-dot" + (i === index ? " active" : "");
+            dot.onclick = () => { index = i; update(); };
+            dots.appendChild(dot);
+        });
+    }
+
+    prev.onclick = () => { index = (index - 1 + imgs.length) % imgs.length; update(); };
+    next.onclick = () => { index = (index + 1) % imgs.length; update(); };
+    close.onclick = () => modal.classList.remove("active");
+
+    modal.addEventListener("click", e => {
+        if (e.target === modal) modal.classList.remove("active");
+    });
+}
+
+/* ============================================================
+   MODAL DOS CERTIFICADOS (FUNÇÃO ORIGINAL)
+============================================================ */
+
+function initCertificateModal() {
+    document.querySelectorAll('#certificados .card .overlay').forEach(overlay => {
+        overlay.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const img = this.parentNode.querySelector('img');
+            const modal = document.getElementById('image-modal');
+            const modalImg = document.getElementById('modal-image');
+            modalImg.src = img.src;
+            modal.style.display = 'flex';
+        });
+    });
+
+    document.querySelector('.image-modal-close').onclick = function() {
+        document.getElementById('image-modal').style.display = 'none';
+    };
+
+    document.getElementById('image-modal').onclick = function(e) {
+        if (e.target === this) this.style.display = 'none';
+    };
+}
