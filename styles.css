@@ -661,6 +661,92 @@ body.light-mode {
 
 }
 
+
+
+
+
+
+
+/* ========================================= */
+/* PROJETOS — CARDS SIMPLES (SEM CONFLITO)   */
+/* ========================================= */
+
+/* Container interno (NÃO mexe nas tabs) */
+.projects-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+/* Card */
+.project-card-simple {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(147, 112, 219, 0.08);
+    border-radius: 16px;
+}
+
+/* Imagem do projeto */
+.project-image {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 6px 20px rgba(199, 125, 255, 0.25);
+}
+
+/* Título */
+.project-card-simple h3 {
+    color: var(--purple-light);
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+/* Texto */
+.project-card-simple p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(230, 230, 250, 0.85);
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE                */
+/* ============================= */
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card-simple {
+        max-width: 90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* --- Tab Certificados --- */
 .certificates-grid {
   display: grid;
