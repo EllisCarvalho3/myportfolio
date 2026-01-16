@@ -79,9 +79,9 @@ window.addEventListener('resize', () => {
 // --- DADOS PARA O EFEITO ---
 const roles = ["Developer", "Designer", "Creator"]; 
 const descriptions = [
-    "Construo experiências digitais criativas e funcionais.", 
-    "Crio interfaces intuitivas e designs centrados no desejo do usuário.",
-    "Dou vida a ideias, transformando conceitos em produtos excepcionais."
+    "Desenvolvo projetos Front-End enquanto evoluo continuamente na área.", 
+    "Busco criar interfaces funcionais e agradáveis, aplicando boas práticas e aprendendo a cada projeto.",
+    "Transformo ideias em soluções reais, com dedicação, curiosidade e foco em melhoria constante."
 ]; 
 let textIndex = 0; 
 
