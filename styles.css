@@ -1150,9 +1150,9 @@ body.light-mode {
   }
 
   .logo-img img {
-    width: 70%;
+    width: 50%;
     height: auto;
-    margin-top: 10px;
+    margin-top: 12px;
     padding-right: 30px;
   }
 
@@ -1168,7 +1168,7 @@ body.light-mode {
     color: var(--text-color);
     z-index: 1500;
   }
-  
+
   #menu-toggle:hover {
     color: var(--purple-light);
     transition: ease-in-out 0.3s;
