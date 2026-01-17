@@ -724,9 +724,9 @@ body.light-mode {
 
 /* Modal refinado */
 .image-modal {
-  display: flex;
+  display: none;
   position: fixed;
-  padding: 20px;
+  inset: 0;
   background: rgba(0,0,0,0.85);
   z-index: 3000;
   justify-content: center;
@@ -1318,23 +1318,6 @@ body.light-mode {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-  .image-modal {
-    padding: 16px;
-  }
-
-  .image-modal-content {
-    width: auto;
-    max-width: 95%;
-    max-height: 85vh;         /* 🔑 evita colar no topo */
-    border-radius: 10px;
-    object-fit: contain;
-  }
-
-  .image-modal-close {
-    font-size: 28px;
-    top: 15px;
-    right: 20px;
-  }
 
 
   .technologies-line {
@@ -1360,6 +1343,27 @@ body.light-mode {
     justify-content: center;
   }
 }
+
+@media (max-width: 768px) {
+  .image-modal {
+    padding: 16px;
+  }
+
+  .image-modal-content {
+    width: auto;
+    max-width: 95%;
+    max-height: 85vh;         /* 🔑 evita colar no topo */
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  .image-modal-close {
+    font-size: 28px;
+    top: 15px;
+    right: 20px;
+  }
+}
+
 
 /* ===========================
    TELAS MUITO PEQUENAS (≤ 420px)
@@ -1409,7 +1413,6 @@ body.light-mode {
    MODAL DE IMAGEM – MOBILE
 =========================== */
 @media (max-width: 768px) {
-
  
   #home {
     min-height: 100vh;
@@ -1456,6 +1459,24 @@ body.light-mode {
   }
 }
 
-.image-modal-content {
-    max-height: 80vh;
+@media (max-width: 420px) {
+  .image-modal-content {
+    max-height: 60vh;
+     width: auto;
+      max-width: 95%;
+      border-radius: 10px;
+    object-fit: contain;
   }
+
+   .image-modal {
+    padding: 16px;
+  }
+ 
+  .image-modal-close {
+    font-size: 28px;
+    top: 15px;
+    right: 20px;
+  }
+}
+
+
