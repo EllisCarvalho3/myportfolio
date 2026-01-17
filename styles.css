@@ -1424,7 +1424,11 @@ body.light-mode {
     padding: 0 16px;
     text-align: center;
   }
-
+.image-modal-close {
+    font-size: 30px;
+    top: 120px;
+    right: 35px;
+  }
 
 }
 
@@ -1432,6 +1436,12 @@ body.light-mode {
 
   header {
     position: fixed;
+  }
+
+  .image-modal-close {
+    font-size: 30px;
+    top: 120px;
+    right: 60px;
   }
 }
 
@@ -1473,8 +1483,8 @@ body.light-mode {
   }
  
   .image-modal-close {
-    font-size: 28px;
-    top: 80px;
+    font-size: 30px;
+    top: 120px;
     right: 35px;
   }
 }
