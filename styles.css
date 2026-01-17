@@ -1384,6 +1384,22 @@ body.light-mode {
     top: 10px;
     right: 20px;
   }
+  #dynamic-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 12px;
+
+  /* ESSENCIAL PARA NÃO CORTAR TEXTO */
+  height: auto;
+  min-height: unset;
+  max-height: none;
+  overflow: visible;
+
+  /* Quebra correta de linhas */
+  white-space: normal;
+  word-break: break-word;
+}
+
 }
 
 @media (max-width: 480px) {
@@ -1405,3 +1421,11 @@ body.light-mode {
     font-size: 28px;
   }
 }
+
+@media (max-width: 420px) {
+  #dynamic-description {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+}
+
