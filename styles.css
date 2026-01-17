@@ -1451,5 +1451,13 @@ body.light-mode {
   #dynamic-description {
     font-size: 0.95rem;
   }
+
+  .sobre {
+    padding-top: 10px;
+  }
+
+  .contato {
+    padding-top: 10px;
+  }
 }
 
