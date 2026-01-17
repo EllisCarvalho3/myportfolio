@@ -1138,13 +1138,14 @@ body.light-mode {
      HEADER E NAVEGAÇÃO
   =========================== */
 
-  header {
+ header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     padding: 1rem 1.5rem;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
     z-index: 1100;
   }
 
@@ -1155,14 +1156,22 @@ body.light-mode {
     padding-right: 30px;
   }
 
-  #menu-toggle {
-    display: block;
+   #menu-toggle {
+    position: absolute;
+    right: 20px;        /* 👈 controla exatamente a posição */
+    top: 50%;
+    transform: translateY(-50%);
     background: transparent;
     border: none;
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
     z-index: 1500;
+  }
+  
+  #menu-toggle:hover {
+    color: var(--purple-light);
+    transition: ease-in-out 0.3s;
   }
 
   nav {
