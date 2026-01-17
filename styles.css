@@ -1109,6 +1109,9 @@ body.light-mode {
 #theme-toggle:hover {
     color: var(--purple-light);
 }
+
+
+
 /* ==========================================================
    RESPONSIVIDADE GLOBAL – MOBILE E TELAS PEQUENAS
 ========================================================== */
@@ -1239,13 +1242,21 @@ body.light-mode {
   }
 
   #dynamic-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-top: 12px;
-    min-height: 4.5em; /* evita pulo e distorção */
-    max-width: 100%;
-    word-break: break-word;
-  }
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 12px;
+
+  /* ESSENCIAL PARA NÃO CORTAR TEXTO */
+  height: auto;
+  min-height: unset;
+  max-height: none;
+  overflow: visible;
+
+  /* Quebra correta de linhas */
+  white-space: normal;
+  word-break: break-word;
+}
+
 
   #home img {
     max-width: 240px;
@@ -1349,7 +1360,8 @@ body.light-mode {
 
   #dynamic-description {
     font-size: 0.95rem;
-  }
+    line-height: 1.5;
+}
 
   .certificates-grid {
     grid-template-columns: 1fr;
