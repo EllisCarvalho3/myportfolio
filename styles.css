@@ -1430,12 +1430,12 @@ body.light-mode {
 
 @media (max-width: 480px) {
 
- 
-
   header {
     position: fixed;
   }
 }
+
+
 
 @media (max-width: 420px) {
    #dynamic-text {
@@ -1474,8 +1474,8 @@ body.light-mode {
  
   .image-modal-close {
     font-size: 28px;
-    top: 15px;
-    right: 20px;
+    top: 80px;
+    right: 35px;
   }
 }
 
