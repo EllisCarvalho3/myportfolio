@@ -80,7 +80,7 @@ window.addEventListener('resize', () => {
 const roles = ["Developer", "Designer", "Creator"]; 
 const descriptions = [
     "Desenvolvo projetos Front-End enquanto evoluo continuamente na área.", 
-    "Busco criar interfaces funcionais e agradáveis, aplicando boas práticas e aprendendo a cada projeto.",
+    "Busco criar interfaces funcionais e agradáveis, aplicando boas práticas.",
     "Transformo ideias em soluções reais, com dedicação, curiosidade e foco em melhoria constante."
 ]; 
 let textIndex = 0; 
