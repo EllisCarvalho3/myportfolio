@@ -1456,6 +1456,15 @@ body.light-mode {
     background: rgba(0,0,0,0.35);
   }
 
+  .certificate-card:hover .overlay {
+  opacity: 1;
+}
+.overlay i {
+  font-size: 1.8rem;
+  color: var(--purple-light);
+  text-shadow: 0 0 10px var(--purple-main);
+}
+
   .overlay i {
     font-size: 2rem;
   }
@@ -1474,6 +1483,11 @@ body.light-mode {
     right: 24px;
     font-size: 30px;
   }
+
+  @keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
 }
 
 
@@ -1495,6 +1509,20 @@ body.light-mode {
     right: 18px;
     font-size: 28px;
   }
+
+  @keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.certificate-card:hover .overlay {
+  opacity: 1;
+}
+.overlay i {
+  font-size: 1.8rem;
+  color: var(--purple-light);
+  text-shadow: 0 0 10px var(--purple-main);
+}
 }
 
 
@@ -1504,13 +1532,24 @@ body.light-mode {
     grid-template-columns: 1fr;
   }
 
-  .overlay i {
-    font-size: 1.8rem;
-  }
-
   .image-modal-close {
     top: 14px;
     right: 14px;
     font-size: 26px;
   }
+
+  @keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
 }
+
+.certificate-card:hover .overlay {
+  opacity: 1;
+}
+.overlay i {
+  font-size: 1.8rem;
+  color: var(--purple-light);
+  text-shadow: 0 0 10px var(--purple-main);
+}
+}
+
