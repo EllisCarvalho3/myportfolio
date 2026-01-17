@@ -1450,6 +1450,11 @@ body.light-mode {
     gap: 15px;
   }
 
+  .certificate-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px #7f0ed58b;
+}
+
   /* 🔑 Overlay SEMPRE visível no mobile */
   .certificate-card .overlay {
     opacity: 1;
@@ -1494,6 +1499,10 @@ body.light-mode {
 
 @media (max-width: 480px) {
 
+  .certificate-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px #7f0ed58b;
+}
   .image-modal {
     align-items: center;
   }
@@ -1528,6 +1537,10 @@ body.light-mode {
 
 @media (max-width: 420px) {
 
+  .certificate-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 30px #7f0ed58b;
+}
   .certificates-grid {
     grid-template-columns: 1fr;
   }
