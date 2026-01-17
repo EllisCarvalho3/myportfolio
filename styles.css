@@ -1344,6 +1344,25 @@ body.light-mode {
   }
 }
 
+@media (max-width: 768px) {
+  .image-modal {
+    padding: 16px;
+  }
+
+  .image-modal-content {
+    width: auto;
+    max-width: 95%;
+    max-height: 85vh;         /* 🔑 evita colar no topo */
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+  .image-modal-close {
+    font-size: 28px;
+    top: 15px;
+    right: 20px;
+  }
+}
 
 
 /* ===========================
@@ -1440,129 +1459,27 @@ body.light-mode {
   }
 }
 
-
-
-
-@media (max-width: 768px) {
-
-  .certificates-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 15px;
-  }
-
-  .certificate-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px #7f0ed58b;
-}
-
-  /* 🔑 Overlay SEMPRE visível no mobile */
-  .certificate-card .overlay {
-    opacity: 1;
-    background: rgba(0,0,0,0.35);
-  }
-
-  .certificate-card:hover .overlay {
-  opacity: 1;
-}
-.overlay i {
-  font-size: 1.8rem;
-  color: var(--purple-light);
-  text-shadow: 0 0 10px var(--purple-main);
-}
-
-  .overlay i {
-    font-size: 2rem;
-  }
-
-  .image-modal {
-    padding: 20px;
-  }
-
-  .image-modal-content {
-    width: 95%;
-    max-height: 80vh;
-  }
-
-  .image-modal-close {
-    top: 24px;
-    right: 24px;
-    font-size: 30px;
-  }
-
-  @keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-}
-
-
-
-@media (max-width: 480px) {
-
-  .certificate-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px #7f0ed58b;
-}
-  .image-modal {
-    align-items: center;
-  }
-
-  .image-modal-content {
-    width: 100%;
-    max-height: 75vh;
-    border-radius: 10px;
-  }
-
-  .image-modal-close {
-    top: 18px;
-    right: 18px;
-    font-size: 28px;
-  }
-
-  @keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.certificate-card:hover .overlay {
-  opacity: 1;
-}
-.overlay i {
-  font-size: 1.8rem;
-  color: var(--purple-light);
-  text-shadow: 0 0 10px var(--purple-main);
-}
-}
-
-
 @media (max-width: 420px) {
-
-  .certificate-card:hover {
-  transform: scale(1.03);
-  box-shadow: 0 10px 30px #7f0ed58b;
-}
-  .certificates-grid {
-    grid-template-columns: 1fr;
+  .image-modal-content {
+    max-height: 60vh;
+     width: auto;
+      max-width: 95%;
+      border-radius: 10px;
+    object-fit: contain;
   }
 
+   .image-modal {
+    padding: 16px;
+  }
+ 
   .image-modal-close {
-    top: 14px;
-    right: 14px;
-    font-size: 26px;
+    font-size: 28px;
+    top: 15px;
+    right: 20px;
   }
-
-  @keyframes zoomIn {
-  from { transform: scale(0.8); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
 }
 
-.certificate-card:hover .overlay {
-  opacity: 1;
-}
-.overlay i {
-  font-size: 1.8rem;
-  color: var(--purple-light);
-  text-shadow: 0 0 10px var(--purple-main);
-}
-}
+
+
+
 
