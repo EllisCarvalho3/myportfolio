@@ -1022,7 +1022,7 @@ body.light-mode {
         box-shadow: 0 0 25px var(--purple-light), 0 0 40px var(--purple-medium);
     }
     .socials a {
-        background: var(--social-bg);
+        background: rgb(235, 215, 245);
         box-shadow: 0 0 15px rgba(138, 43, 226, 0.2);
         color: var(--social-color);
     }
