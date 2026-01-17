@@ -1151,7 +1151,7 @@ body.light-mode {
   }
 
   .logo-img img {
-    width: 50%;
+    width: 40%;
     height: auto;
     margin-top: 12px;
     padding-right: 30px;
@@ -1362,6 +1362,23 @@ body.light-mode {
   .tech-icon {
     width: 120px;
     height: 120px;
+  }
+   #menu-toggle {
+    position: fixed;          
+    top: 18px;                
+    right: 100px;              
+    background: transparent;
+    border: none;
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: var(--text-color);
+    z-index: 2000;            /* acima de tudo */
+  }
+
+  #menu-toggle:hover {
+    color: var(--purple-light);
+    transition: ease-in-out 0.3s;
   }
 }
 
