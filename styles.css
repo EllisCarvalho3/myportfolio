@@ -1441,6 +1441,10 @@ body.light-mode {
     right: 15px;
     font-size: 28px;
   }
+
+  header {
+    position: fixed;
+  }
 }
 
 @media (max-width: 420px) {
@@ -1458,6 +1462,10 @@ body.light-mode {
 
   .contato {
     padding-top: 10px;
+  }
+
+  header {
+    position: fixed;
   }
 }
 
