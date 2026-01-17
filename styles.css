@@ -1213,7 +1213,7 @@ body.light-mode {
 
   #home {
     min-height: 100vh;
-    padding: 120px 20px 60px;
+    padding: 10px 20px 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1229,6 +1229,7 @@ body.light-mode {
         font-size: 3.5rem;
         line-height: 1.3;
         text-align: center;
+      
     }
 
    #dynamic-text {
@@ -1264,6 +1265,7 @@ body.light-mode {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    padding-top: 0;
   }
 
   #sobre .foto {
@@ -1281,7 +1283,7 @@ body.light-mode {
   =========================== */
 
   #portfolio {
-    padding-top: 80px;
+    padding-top: 100px;
   }
 
   .tabs {
@@ -1331,6 +1333,10 @@ body.light-mode {
   /* ===========================
      CONTATO
   =========================== */
+.contato {
+  padding-top: 10px;
+}
+
 
   #contato .socials {
     flex-wrap: wrap;
