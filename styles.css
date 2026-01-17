@@ -1162,7 +1162,7 @@ body.light-mode {
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
-    z-index: 1160;
+    z-index: 1500;
   }
 
   nav {
