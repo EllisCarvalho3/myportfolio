@@ -1163,6 +1163,7 @@ body.light-mode {
     right: 100px;              /* 👈 move para a esquerda/direita */
     background: transparent;
     border: none;
+    display: block;
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
@@ -1314,6 +1315,9 @@ body.light-mode {
   .certificates-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
+  }
+  .certificate-card {
+    margin-top: 40px;
   }
 
   .technologies-line {
