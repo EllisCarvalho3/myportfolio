@@ -1132,13 +1132,14 @@ body.light-mode {
   p {
     font-size: 1rem;
     line-height: 1.6;
+    text-align: center;
   }
 
   /* ===========================
      HEADER E NAVEGAÇÃO
   =========================== */
 
- header {
+  header {
     position: fixed;
     top: 0;
     left: 0;
@@ -1157,16 +1158,15 @@ body.light-mode {
   }
 
    #menu-toggle {
-    position: absolute;
-    right: 20px;        /* 👈 controla exatamente a posição */
-    top: 50%;
-    transform: translateY(-50%);
+    position: fixed;          /* 🔑 NÃO é absolute */
+    top: 18px;                /* ajustável */
+    right: 100px;              /* 👈 move para a esquerda/direita */
     background: transparent;
     border: none;
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
-    z-index: 1500;
+    z-index: 2000;            /* acima de tudo */
   }
 
   #menu-toggle:hover {
