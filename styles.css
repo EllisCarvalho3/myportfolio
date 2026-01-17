@@ -28,7 +28,7 @@ canvas#bg {
 
 /* --- Canvas de Partículas --- */
 
-/* --- Vaga-lumes e Animações --- */
+/* --- efeito vagalume --- */
 .firefly {
     position: fixed;
     left: 50%;
@@ -210,9 +210,9 @@ canvas#bg {
 .firefly:nth-child(15)::before { animation-duration: 18s; }
 .firefly:nth-child(15)::after { animation-duration: 18s, 6800ms; animation-delay: 0ms, 4300ms; }
 
-/* --- Vaga-lumes e Animações --- */
+/* --- efeito vagalume --- */
 
-/* --- Cabeçalho e Navegação --- */
+/* cabeçalho papai */
 header {
     background: rgba(13, 13, 13, 0.9);
     padding: 1rem 2rem;
@@ -259,11 +259,10 @@ nav a.active {
 }
 
 
-
 /* dark mode */
 
 
-/* === Header === */
+/* header */
 header {
   background: var(--header-bg);
   backdrop-filter: blur(6px);
@@ -279,11 +278,10 @@ header nav a:hover {
 
 /* dark mode */
 
-/* --- Cabeçalho e Navegação --- */
+/* cabeçalho papai */
 
 
-
-/* --- Seções Gerais --- */
+/* --- demais seções --- */
 section {
     padding: 60px 20px;
     min-height: 100vh;
@@ -312,7 +310,7 @@ section.visible > * {
     transform: translateY(0);
 }
 
-/* --- Seção Home --- */
+/* --- seção home --- */
 #home {
     flex-direction: row;
     justify-content: space-around;
@@ -336,7 +334,7 @@ section.visible > * {
 
 }
 
-/* Estiliza o SPAN que receberá o efeito de digitação */
+/* efeito digitação */
 #dynamic-text {
    display: inline-flex;
   align-items: baseline;
@@ -346,16 +344,12 @@ section.visible > * {
   animation: blink 0.75s step-end infinite;
 }
 
-/* Animações de Digitação e Cursor */
-/* Mantemos apenas o @keyframes para o cursor piscando */
+/* cursor */
 @keyframes blink {
     50% { border-color: transparent }
 }
+/* cursor */
 
-/* As @keyframes typing e deleting foram removidas, pois o JS fará o trabalho. */
-
-
-/* NOVO: Estiliza o Parágrafo (P) para ter o cursor */
 #dynamic-description {
      display: block;
   margin-top: 15px;
@@ -369,7 +363,6 @@ section.visible > * {
   animation: blink 0.75s step-end infinite;
 }
 
-/* ... o @keyframes blink ... */
 @keyframes blink {
     50% { border-color: var(--purple-main); }
 }
@@ -382,9 +375,9 @@ section.visible > * {
     box-shadow: 0 0 30px rgba(199, 125, 255, 0.5);
     animation: float 3s ease-in-out infinite;
 }
-/* --- Seção Home --- */
+/* --- seção home --- */
 
-/* --- Seção Sobre --- */
+/* --- seção sobre --- */
 #sobre {
     flex-direction: row;
     justify-content: space-around;
@@ -422,14 +415,13 @@ section.visible > * {
     background-position: center;
     animation: float 4s ease-in-out infinite;
 }
-/* --- Seção Sobre --- */
+/* --- seção sobre --- */
 
-/* --- Seção Portfólio --- */
-/* Cores do Tema (Geral) */
+
 :root {
-    --purple-main: #9370db; /* Lilás (MediumPurple) */
-    --purple-light: #c77dff; /* Lilás Mais Claro */
-    --purple-shadow: rgba(199, 125, 255, 0.5); /* Sombra Roxa/Lilás */
+    --purple-main: #9370db; 
+    --purple-light: #c77dff; 
+    --purple-shadow: rgba(199, 125, 255, 0.5); 
     --background-color: #0d0d0d;
     --text-color: #e6e6fa;
 }
@@ -438,9 +430,7 @@ body.light-mode {
 }
 
 #home .text h1 {
-    /* A largura inicial será definida pelo JS */
-   
-    animation: none; /* Controlado pelo JS */
+    animation: none; /* controlado pelo js */
     font-size: 3rem;
     line-height: 1.2;
 }
@@ -451,17 +441,9 @@ body.light-mode {
 }
 
 
-
-
-
-
-
-/* -------------------------------------- */
-/* SEÇÃO PORTFÓLIO: Tabs e Conteúdo */
-/* -------------------------------------- */
-
+/* --- seção portfólio --- */
 #portfolio {
-    padding-top: 100px; /* Garante que não fique atrás do header fixo */
+    padding-top: 100px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -475,13 +457,13 @@ body.light-mode {
     animation: neonPulse 2s infinite;
 }
 
-/* Estilo das Tabs */
+/* estilo das tabs */
 .tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 40px;
     border-radius: 10px;
-    background: rgba(var(--text-color-rgb), 0.05); /* Fundo sutil */
+    background: rgba(var(--text-color-rgb), 0.05); 
     padding: 5px;
 }
 
@@ -504,12 +486,12 @@ body.light-mode {
 }
 
 .tab-button.active {
-    background-color: var(--purple-main); /* Fundo Lilás na ativa */
-    color: var(--background-color); /* Texto escuro para contraste */
+    background-color: var(--purple-main); 
+    color: var(--background-color); 
     box-shadow: 0 0 15px var(--purple-shadow);
 }
 
-/* Conteúdo das Tabs */
+/* conteúdo das tabs */
 .portfolio-content {
     width: 90%;
     max-width: 1200px;
@@ -522,57 +504,10 @@ body.light-mode {
 }
 
 .tab-content.active {
-  display: flex; /* ou block, conforme o layout */
+  display: flex;
   opacity: 1;
 }
 
-
-/* Efeito Hover/Zoom/Shadow Geral (para cards de Projetos, Certificados e Tecnologias) */
-.card {
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-radius: 12px;
-    overflow: hidden;
-    position: relative;
-    background-color: rgba(var(--text-color-rgb), 0.03); /* Fundo sutil para cards */
-    
-}
-.card:hover {
-    transform: scale(1.03) translateY(-5px);
-    box-shadow: 0 10px 30px var(--purple-shadow), 0 0 10px var(--purple-main);
-}
-
-/* --- Tab Projetos: Slideshows --- */
-#projetos {
-    flex-direction: row; /* Layout lado a lado */
-    align-items: flex-start;
-}
-
-.project-card {
-    width: 40%; /* Quase metade para caber dois lado a lado */
-    min-width: 350px;
-    display: flex;
-    margin-left: 70px;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    text-align: center;
-    background-color: #36095d24;
-}
-
-.project-card h3 {
-    color: var(--purple-light);
-    margin-bottom: 15px;
-    font-size: 1.8rem;
-}
-.project-card p {
-    margin: 15px 0 25px;
-    font-size: 1rem;
-    color: rgba(var(--text-color-rgb), 0.8);
-    height: 3.6em; /* Altura fixa para evitar "vazamento" de texto */
-    overflow: hidden;
-}
-
-/* Botão GitHub */
 .github-btn {
     display: inline-block;
     padding: 10px 20px;
@@ -592,14 +527,20 @@ body.light-mode {
 
 }
 
+/* cards dos projetos */
+.card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    position: relative;
+    background-color: rgba(var(--text-color-rgb), 0.03);
+    
+}
+.card:hover {
+    transform: scale(1.03) translateY(-5px);
+    box-shadow: 0 10px 30px var(--purple-shadow), 0 0 10px var(--purple-main);
+}
 
-
-
-/* ========================================= */
-/* PROJETOS — CARDS SIMPLES (SEM CONFLITO)   */
-/* ========================================= */
-
-/* Container interno (NÃO mexe nas tabs) */
 .projects-grid {
     display: flex;
     justify-content: center;
@@ -608,7 +549,6 @@ body.light-mode {
     width: 100%;
 }
 
-/* Card */
 .project-card-simple {
     width: 100%;
     max-width: 420px;
@@ -618,7 +558,6 @@ body.light-mode {
     border-radius: 16px;
 }
 
-/* Imagem do projeto */
 .project-image {
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -628,14 +567,12 @@ body.light-mode {
     box-shadow: 0 6px 20px rgba(199, 125, 255, 0.25);
 }
 
-/* Título */
 .project-card-simple h3 {
     color: var(--purple-light);
     margin-bottom: 10px;
     font-size: 1.6rem;
 }
 
-/* Texto */
 .project-card-simple p {
     font-size: 1rem;
     line-height: 1.6;
@@ -643,9 +580,7 @@ body.light-mode {
     margin-bottom: 20px;
 }
 
-/* ============================= */
-/* RESPONSIVIDADE                */
-/* ============================= */
+/* responsividade papai */
 @media (max-width: 768px) {
     .projects-grid {
         flex-direction: column;
@@ -656,18 +591,13 @@ body.light-mode {
         max-width: 90%;
     }
 }
+/* responsividade papai */
+/* --- seção portfólio --- */
 
-
-
-
-
-
-
-
-/* --- Tab Certificados --- */
+/* --- tab certificados --- */
 .certificates-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 colunas fixas */
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
   padding: 10px;
   width: 100%;
@@ -681,7 +611,7 @@ body.light-mode {
   border-radius: 14px;
   box-shadow: 0 6px 25px rgba(127, 14, 213, 0.547);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-    max-width: 320px; /* limite visual por card */
+    max-width: 320px; 
 
 }
 .certificate-card:hover {
@@ -701,7 +631,7 @@ body.light-mode {
   filter: brightness(1.05);
 }
 
-/* Overlay com ícone de lupa */
+/* efeito da lupa */
 .certificate-card .overlay {
   position: absolute;
   inset: 0;
@@ -722,7 +652,8 @@ body.light-mode {
   text-shadow: 0 0 10px var(--purple-main);
 }
 
-/* Modal refinado */
+/* efeito da lupa */
+
 .image-modal {
   display: none;
   position: fixed;
@@ -758,10 +689,10 @@ body.light-mode {
   color: var(--purple-light);
   transform: scale(1.1);
 }
+/* --- tab certificados --- */
 
 
-
-/* --- Tab Tecnologias --- */
+/* --- tab tecnologias --- */
 .technologies-line {
   display: flex;
   flex-wrap: wrap;
@@ -795,15 +726,12 @@ body.light-mode {
   object-fit: contain;
  
 }
-
-
-
-
- /* --- Seção Portfólio --- */
+/* --- tab tecnologias --- */
+ /* --- seção portfólio --- */
   
 
 
-/* --- Seção Contato --- */
+/* --- seção contato --- */
 #contato {
     flex-direction: column;
     text-align: center;
@@ -849,7 +777,6 @@ body.light-mode {
     color: inherit;
 }
 
-/* --- Efeitos e Animações --- */
 @keyframes neonPulse {
     0%, 100% { text-shadow: 0 0 10px #c77dff, 0 0 20px #a64dff; }
     50% { text-shadow: 0 0 20px #c77dff, 0 0 40px #a64dff; }
@@ -874,11 +801,11 @@ body.light-mode {
     50% { transform: translateY(-15px); }
 }
 
-/* --- Seção Contato --- */
+/* --- seção contato --- */
 
-/* --- Seções Gerais --- */
+/* --- seções gerais --- */
 
-/* --- Rodapé --- */
+/* --- footer --- */
 .footer {
     position: relative;
     top: 50px;
@@ -899,16 +826,16 @@ body.light-mode {
     font-weight: 300;
 }
 
-/* --- Rodapé --- */
+/* --- footer --- */
+
 
 
 /* dark mode */
-
 :root {
   /* Tema Escuro (default) */
   --background-color: #0d0d0d;
-  --text-color: #eae6ff;                 /* texto quase branco */
-  --heading-color: #c77dff;              /* títulos com destaque */
+  --text-color: #eae6ff;                 
+  --heading-color: #c77dff;              
   --purple-light: #c77dff;
   --purple-medium: #a64dff;
   --card-bg: rgba(202, 143, 236, 0.08);
@@ -923,8 +850,8 @@ body.light-mode {
 body.light-mode {
   /* Tema Claro */
   --background-color: #ffffff;
-  --text-color: #333333;                 /* texto escuro */
-  --heading-color: #5a2ca0;              /* roxo profundo */
+  --text-color: #333333;                 
+  --heading-color: #5a2ca0;             
   --purple-light: #8a2be2;
   --purple-medium: #9370db;
   --card-bg: #ebdcff99;
@@ -940,7 +867,7 @@ p.light-mode {
     color: var(--text-color);
 }
 
-/* === Textos === */
+/* textos */
 body {
   background: var(--background-color);
   color: var(--text-color);
@@ -952,8 +879,9 @@ h1, h2, h3, h4 {
   text-shadow: 0 0 6px var(--purple-light);
   transition: color 0.45s ease, text-shadow 0.45s ease;
 }
+/* textos */
 
-/* === Header === */
+/* header */
 header {
   background: var(--header-bg);
   backdrop-filter: blur(6px);
@@ -966,9 +894,9 @@ header nav a {
 header nav a:hover {
   color: var(--purple-light);
 }
+/* header */
 
-
-/* botão do tema (sem alteração lógica) */
+/* botão do tema */
 #theme-toggle {
   background: transparent;
   border: none;
@@ -983,7 +911,7 @@ header nav a:hover {
 
 
 body.light-mode {
-    /* Tema Claro */
+    /* tema claro */
     --background-color: #ffffff;
     --text-color: #3e0664;
     --heading-color: #5a2ca0;
@@ -997,7 +925,7 @@ body.light-mode {
     --header-bg: rgba(255, 255, 255, 0.8);
     --grid-color: #8a2be226;
     
-    /* Regras de cores adicionais para elementos específicos no modo claro */
+   
     .card {
         background-color: var(--card-bg);
     }
@@ -1037,12 +965,7 @@ body.light-mode {
     .btn-github:hover {
         background-color: var(--purple-medium);
     }
-    /* Estilo para a onda do rodapé */
-    .wave {
-        background: url(./img/ondas-branca.png) repeat-x;
-    }
-    
-    /* Mude a cor do ícone do botão de tema */
+   
     #theme-toggle i {
         color: var(--text-color);
     }
@@ -1050,16 +973,14 @@ body.light-mode {
         color: var(--text-color);
     }
     #theme-toggle i.bi-sun-fill {
-        color: var(--social-color); /* Uma cor que se destaca no tema claro */
+        color: var(--social-color); 
     }
-
-    /* Mudar a cor dos fireflies */
+ 
     .firefly::after {
         box-shadow: 0 0 0vw 0vw #5a2ca0;
         animation: drift ease alternate infinite, flash-light ease infinite;
     }
-
-    /* Animação para o modo claro */
+   
     @keyframes flash-light {
         0%, 30%, 100% { opacity: 0; box-shadow: 0 0 0vw 0vw #5a2ca0; }
         5% { opacity: 1; box-shadow: 0 0 2vw 0.4vw #5a2ca0; }
@@ -1072,13 +993,10 @@ body.light-mode {
             .footer p {
         color: var(--text-color);
     }
-
-
     /* dark mode */
-
-
-
-    /* responsividade */
+    
+    
+    /* responsividade chata */
 
 #menu-toggle {
     display: none;
@@ -1098,17 +1016,7 @@ body.light-mode {
     color: var(--purple-light);
 }
 
-
-/* ==========================================================
-   RESPONSIVIDADE GLOBAL – MOBILE E TELAS PEQUENAS
-========================================================== */
-
-/* ===========================
-   MOBILE GERAL (≤ 768px)
-=========================== */
 @media (max-width: 768px) {
-
-  /* Remove animações de entrada no mobile */
   section,
   section > * {
     opacity: 1;
@@ -1134,10 +1042,6 @@ body.light-mode {
     line-height: 1.6;
     text-align: center;
   }
-
-  /* ===========================
-     HEADER E NAVEGAÇÃO
-  =========================== */
 
   header {
     position: fixed;
@@ -1167,7 +1071,7 @@ body.light-mode {
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
-    z-index: 2000;            /* acima de tudo */
+    z-index: 2000;          
   }
 
   #menu-toggle:hover {
@@ -1207,10 +1111,6 @@ body.light-mode {
     margin-left: 0;
   }
 
-  /* ===========================
-     HOME (PROBLEMA CORRIGIDO AQUI)
-  =========================== */
-
   #home {
     min-height: 100vh;
     padding: 10px 20px 60px;
@@ -1239,7 +1139,7 @@ body.light-mode {
   line-height: 1.3;
   white-space: normal;
   word-break: break-word;
-  border-right: 2px solid var(--purple-light); /* mantém cursor */
+  border-right: 2px solid var(--purple-light);
 }
 
 #dynamic-description {
@@ -1248,7 +1148,7 @@ body.light-mode {
   margin-top: 12px;
   white-space: normal;
   word-break: break-word;
-  border-right: 2px solid var(--purple-light); /* cursor separado */
+  border-right: 2px solid var(--purple-light); 
 }
 
   #home img {
@@ -1256,10 +1156,6 @@ body.light-mode {
     height: auto;
     margin-top: 20px;
   }
-
-  /* ===========================
-     SOBRE
-  =========================== */
 
   #sobre {
     flex-direction: column;
@@ -1277,10 +1173,6 @@ body.light-mode {
   #sobre p {
     font-size: 1rem;
   }
-
-  /* ===========================
-     PORTFÓLIO
-  =========================== */
 
   #portfolio {
     padding-top: 100px;
@@ -1330,9 +1222,6 @@ body.light-mode {
     height: 140px;
   }
 
-  /* ===========================
-     CONTATO
-  =========================== */
 .contato {
   padding-top: 10px;
 }
@@ -1352,7 +1241,7 @@ body.light-mode {
   .image-modal-content {
     width: auto;
     max-width: 95%;
-    max-height: 85vh;         /* 🔑 evita colar no topo */
+    max-height: 85vh;       
     border-radius: 10px;
     object-fit: contain;
   }
@@ -1364,10 +1253,6 @@ body.light-mode {
   }
 }
 
-
-/* ===========================
-   TELAS MUITO PEQUENAS (≤ 420px)
-=========================== */
 @media (max-width: 420px) {
 
   #home h1 {
@@ -1400,7 +1285,7 @@ body.light-mode {
     cursor: pointer;
     font-size: 2rem;
     color: var(--text-color);
-    z-index: 2000;            /* acima de tudo */
+    z-index: 2000;         
   }
 
   #menu-toggle:hover {
@@ -1409,9 +1294,6 @@ body.light-mode {
   }
 }
 
-/* ===========================
-   MODAL DE IMAGEM – MOBILE
-=========================== */
 @media (max-width: 768px) {
  
   #home {
@@ -1444,8 +1326,6 @@ body.light-mode {
     right: 60px;
   }
 }
-
-
 
 @media (max-width: 420px) {
    #dynamic-text {
@@ -1488,7 +1368,7 @@ body.light-mode {
     right: 35px;
   }
 }
-
+  /* responsividade chata */
 
 
 
