@@ -230,11 +230,18 @@ header {
 }
 
 .logo-img img {
-    width: 40%;
+    width: 37%;
     padding-right: 30px;
     height: auto;
     margin-top: 50px;
+    transition: transform 0.3s ease;
 }
+
+.logo-img a:hover img {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
 
 nav {
     display: flex;
