@@ -587,6 +587,18 @@ body.light-mode {
     margin-bottom: 20px;
 }
 
+/* Garante que o portfólio apareça corretamente caso o JS de scroll falhe */
+#portfolio {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+#portfolio > * {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
 /* responsividade papai */
 @media (max-width: 768px) {
     .projects-grid {
