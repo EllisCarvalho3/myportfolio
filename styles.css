@@ -716,20 +716,20 @@ body.light-mode {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 35px;
+  gap: 3px;
   padding: 20px 0;
 }
 
 .tech-icon {
-  width: 240px;
-  height: 240px;
+  width: 180px;
+  height: 180px;
   background: linear-gradient(145deg, rgba(199,125,255,0.15), rgba(100,0,180,0.25));
   border: 2px solid var(--purple-light);
   border-radius: 50%;
   box-shadow: 0 0 15px rgba(199, 125, 255, 0.3);
   display: flex;
   align-items: center;
-  margin-left: 25px;
+  margin-left: 50px;
   justify-content: center;
   transition: all 0.35s ease;
     cursor: pointer;
