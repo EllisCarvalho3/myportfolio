@@ -79,9 +79,9 @@ window.addEventListener('resize', () => {
 // --- DADOS PARA O EFEITO ---
 const roles = ["Developer", "Designer", "Creator"]; 
 const descriptions = [
-    "Desenvolvo projetos Front-End enquanto evoluo continuamente na área.", 
-    "Busco criar interfaces funcionais e agradáveis, aplicando boas práticas.",
-    "Transformo ideias em soluções reais, com dedicação, curiosidade e foco em melhoria constante."
+  "Dev Full Stack formada pelo IF Baiano, Campus Guanambi.", 
+  "Gosto especialmente de trabalhar com Front-End e criar interfaces funcionais e agradáveis.",
+  "Também gosto de ler, estudar e documentar projetos, compartilhando por escrito o que aprendo."
 ]; 
 let textIndex = 0; 
 
